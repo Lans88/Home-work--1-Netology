@@ -1,0 +1,109 @@
+//Задача 1:
+var january = "Январь"
+var february = "Февраль"
+var march = "Март"
+var april = "Апрель"
+var may = "Май"
+var june = "Июнь"
+var july = "Июль"
+var august = "Август"
+var september = "Сентябрь"
+var oktober = "Октябрь"
+var november = "Ноябрь"
+var december = "Декабрь"
+var selectedMounth = december
+if selectedMounth == january {
+    print("В январе 16 рабочих дней.")
+} else if selectedMounth == february {
+    print("В феврале 19 рабочих дней.")
+} else if selectedMounth == march {
+    print("В марте 22 рабочих дня.")
+} else if selectedMounth == april {
+    print("В апреле 21 рабочих дня.")
+} else if selectedMounth == may {
+    print("В мае 18 рабочих дней.")
+} else if selectedMounth == june {
+    print("В июне 21 рабочий день.")
+} else if selectedMounth == july {
+    print("В июле 21 рабочий день.")
+} else if selectedMounth == august {
+    print("В августе 23 рабочих дня.")
+} else if selectedMounth == september {
+    print("В сентябре 22 рабочих дня.")
+} else if selectedMounth == oktober {
+    print("В октябре 21 рабочий день.")
+} else if selectedMounth == november {
+    print("В ноябре 21 рабочий день.")
+} else if selectedMounth == december {
+    print("В декабре 22 рабочих дня.")
+} else {
+    print("Введен некорретный месяц")
+}
+
+//Задача 2:
+switch selectedMounth {
+case january:
+    print("В январе 16 рабочих дней.")
+case february:
+    print("В феврале 19 рабочих дней.")
+case march:
+    print("В марте 22 рабочих дня.")
+case april:
+    print("В апреле 21 рабочих дня.")
+case may:
+    print("В мае 18 рабочих дней.")
+case june:
+    print("В июне 21 рабочий день.")
+case july:
+    print("В июле 21 рабочий день.")
+case august:
+    print("В августе 23 рабочих дня.")
+case september:
+    print("В сентябре 22 рабочих дня.")
+case oktober:
+    print("В октябре 21 рабочий день.")
+case november:
+    print("В ноябре 21 рабочий день.")
+case december:
+    print("В декабре 22 рабочих дня.")
+default:
+    print("Введен некорретный месяц.")
+}
+
+var isHoliday = true
+isHoliday ? print("Это рабочий день.") : print("Не рабочий день.")
+
+//Задача 4*:
+enum selectMounth {
+    case january, february, march, april, may, june, jule, august, september, oktober, november, december
+    var description: String {
+        switch self {
+        case .january:
+            return "январь"
+        case .february:
+            return "февраль"
+        case .march:
+            return "март"
+        case .april:
+            return "апрель"
+        case .may:
+            return "май"
+        case .june:
+            return "июнь"
+        case .jule:
+            return "июль"
+        case .august:
+            return "август"
+        case .september:
+            return "сентябрь"
+        case .oktober:
+            return "октябрь"
+        case .november:
+            return "ноябрь"
+        case .december:
+            return "декабрь"
+        }
+    }
+}
+var mounth = selectMounth.self.april.description
+print(mounth)
