@@ -1,0 +1,97 @@
+//Задача 1:
+/*
+ 1. Бажанов Артем
+ 2. Решил кардинально сменить сферу деятельности и поэтому пошел учиться на разработчика. 10 лет пользуюсь исключительно яблочными телефонами и выбор языка программирования стал ожидаемым и логичным. Зимой люблю кататься на сноуборде.
+ 3. Опыта с другими языками программирования не имею.
+ 4. Такой информации нет.
+ 5. Всю жизнь после университета работал в экономической сфере, опыт 10 лет.
+ 6. Образование высшее, техническое.
+ */
+
+//Задача 2:
+let name: String = "Artem"
+var secondName: String = "Bazhanov"
+var age: Int = 33
+let isGender: Bool = true
+let city: String = "Moskow"
+var pay: Int = 140000
+let leave: String = "40 календарных дней в год"
+let likeColor: String = "темно-синий"
+
+//Задача 3*:
+var payMiddleIOS: Double = 150000
+var payJuniorIOS: Int = 80000
+var middleAndroid: Int = 140000
+
+payMiddleIOS *= 1.2
+print(payMiddleIOS)
+payJuniorIOS += 20000
+print(payJuniorIOS)
+
+//Часть 2: Задача 1:
+/*
+ возраст человека: Int
+ Население города: Int
+ Число звезд в галактике: Int
+ Один байт ОЗУ: Int
+ Средняя зп: Int
+ Цвет фигуры: String
+ Длина в мм: Double
+ Длина в см: Double
+ Фамилия человека: String
+ Время года: String
+ Пол человека: Bool
+ */
+
+//Задача 2:
+//возраст человека
+let myAge: Int = 33
+print(myAge)
+
+//Население города
+let populationCity = 1100000
+print(populationCity)
+
+//число звезд в галактике
+let numberStars = 2374900000
+print(numberStars)
+
+//Один байт ОЗУ
+let byteRAM = 1
+print(byteRAM)
+
+//средняя зп:
+let middlePay = 1600000
+print(middlePay)
+
+//цвет фигуры
+let colorFigure = "red"
+print(colorFigure)
+
+//Длина в мм:
+let lenghtMM = 1.0
+print(lenghtMM)
+
+//Длина в см:
+let lenghtSM = 1.7
+print(lenghtSM)
+
+//фамилия человека
+let surname = "Petrov"
+print(surname)
+
+//Время года
+var season = "Winter"
+print(season)
+
+//Пол человека
+var isSex = true
+print(isSex)
+
+//Задача 3:
+var payManager = 55000
+var payMechanic = 40000
+var payDriver = 70000
+payManager *= 2
+payMechanic += 15000
+print("Через месяц зарплата менеджера составила \(payManager) рублей.\nЧерез месяц зарплата механика составила \(payMechanic) рублей.\nЗарплата водителя не изменилась и составила \(payDriver) рублей.")
