@@ -1,0 +1,29 @@
+//Задача 1:
+var myFavoritesTuple = (likeFilm: "x-mans", likeNumber: 4, likeDish: "steak New York")
+let (likeFilm, likeNumber, likeDish) = myFavoritesTuple
+var otherFavoritesTuple = (likeFilm: "avengers", likeNumber: 7, likeDish: "cheesecake New York")
+var newTuple = myFavoritesTuple
+myFavoritesTuple = otherFavoritesTuple
+otherFavoritesTuple = newTuple
+print(myFavoritesTuple)
+print(otherFavoritesTuple)
+let newTupleNumbers = (myFavoritesTuple.likeNumber, otherFavoritesTuple.likeNumber, (myFavoritesTuple.likeNumber - otherFavoritesTuple.likeNumber))
+print(newTupleNumbers)
+
+
+//Задача 2:
+var journal: [String: [String: Int]] = ["Boris": ["Biology": 5], "Artem": ["Lit-ra": 4], "Sasha": ["Fiz-ra": 5]]
+var name = journal["Boris"]
+name
+
+//Задача 3:
+typealias chessman = [String: (alpha: Character, num: Int)?]
+var figure: chessman = ["whiteKing": ("D", 1)]
+var chessmans: chessman = ["whiteHorse": ("B", 2), "whiteElephant": ("C", 1), "blackPawn": (nil)]
+if let info = chessmans["whiteElephant"] {
+    if info != nil {
+        print("Координаты фигуры \(info!)")
+    } else {
+        print("Фигура убита")
+    }
+}
