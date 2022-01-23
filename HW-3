@@ -1,0 +1,106 @@
+//Задача 1:
+let vkData = "19067"
+let fbData = "13400"
+let instData = "_10045"
+let youTubeData = "10$0d00"
+let webSiteData = "I0I12"
+var vkDataInt: Int? = Int(vkData)
+var fbDataInt: Int? = Int(fbData)
+var instDataInt: Int? = Int(instData)
+var youTubeDataInt: Int? = Int(youTubeData)
+var webSiteDataInt: Int? = Int(webSiteData)
+var sumResult = 0
+
+//способ force unwrapping
+if vkDataInt != nil {
+    sumResult += vkDataInt!
+}
+if fbDataInt != nil {
+    sumResult += fbDataInt!
+}
+if instDataInt != nil {
+    sumResult += instDataInt!
+}
+if youTubeDataInt != nil {
+    sumResult += youTubeDataInt!
+}
+if webSiteDataInt != nil {
+    sumResult += webSiteDataInt!
+}
+print(sumResult)
+
+//способ optinal binding
+var sum = 0
+if let vkInt = vkDataInt {
+    sum += vkInt
+}
+if let fbInt = fbDataInt {
+    sum += fbInt
+}
+if let instInt = instDataInt {
+    sum += instInt
+}
+if let youTubeInt = youTubeDataInt {
+    sum += youTubeInt
+}
+if let webSiteInt = webSiteDataInt {
+    sum += webSiteInt
+}
+print(sum)
+
+//способ nil-coalesing
+let vkDataRes = vkDataInt ?? 0
+let fbDataRes = fbDataInt ?? 0
+let instDataRes = instDataInt ?? 0
+let youTubeDataRes = youTubeDataInt ?? 0
+let webSiteDataRes = webSiteDataInt ?? 0
+var sumRes = vkDataRes + fbDataRes + instDataRes + youTubeDataRes + webSiteDataRes
+print(sumRes)
+
+//Задача 2:
+var isConfirm = false
+if let vk = vkDataInt {
+    if isConfirm == true {
+        print("Ты подтвердил оплату на сумму \(vk).")
+    } else {
+        print("Платеж отменен.")
+    }
+} else {
+    print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
+}
+if let fb = fbDataInt {
+    if isConfirm == true {
+        print("Ты подтвердил оплату на сумму \(fb).")
+    } else {
+        print("Платеж отменен.")
+    }
+} else {
+    print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
+}
+if let inst = instDataInt {
+    if isConfirm == true {
+        print("Ты подтвердил оплату на сумму \(inst).")
+    } else {
+        print("Платеж отменен.")
+    }
+} else {
+    print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
+}
+if let youTube = youTubeDataInt {
+    if isConfirm == true {
+        print("Ты подтвердил оплату на сумму \(youTube).")
+    } else {
+        print("Платеж отменен.")
+    }
+} else {
+    print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
+}
+if let web = webSiteDataInt {
+    if isConfirm == true {
+        print("Ты подтвердил оплату на сумму \(web).")
+    } else {
+        print("Платеж отменен.")
+    }
+} else {
+    print("Упс... Нам жаль, что-то пошло не так, попробуйте позже")
+}
