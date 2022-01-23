@@ -1,0 +1,83 @@
+// Решение задачи №1:
+var appleArray: [String?] = []
+func insertInApple (model: String?) {
+    appleArray.append(model)
+}
+insertInApple(model: "XS")
+print(appleArray)
+insertInApple(model: "13 Pro")
+print(appleArray)
+
+func removeApple (model: String?) {
+    for _ in appleArray {
+        if model == nil {
+            print ("Не найдено значение.")
+        } else {
+            appleArray.removeAll{$0 == model}
+        }
+    }
+    
+}
+removeApple(model: "13 Pro")
+print(appleArray)
+    /*
+ Если попытаться удалить значение, котрого нет в массиве, то ничего не произойдет. Можно добавить проверку на наличие значения в массиве и в случае отсутствия значения распечатать на консоль сообщение "Введенное значение не найдено." Проверку можно провести с использованием опционалов.
+ */
+removeApple(model: "XS")
+print(appleArray)
+removeApple(model: "4s")
+
+// Решение задачи №2:
+// подготовленный словарь
+userPoints
+func transformation(client: [Int: Double]) -> [Int: Int] {
+    var money: [Int: Int] = [:]
+    for (id, bonus) in client {
+        money.updateValue(Int(bonus/10), forKey: id)
+    }
+    return money
+}
+print(transformation(client: userPoints))
+
+func transformationCoefficient (client: [Int: Double], coefficient: Double) -> [Int: Int] {
+    var moneyCoefficient: [Int: Int] = [:]
+    for (id, bonus) in client {
+        moneyCoefficient.updateValue(Int(bonus/10*coefficient), forKey: id)
+    }
+    return moneyCoefficient
+}
+print(transformationCoefficient(client: userPoints, coefficient: 0.7))
+
+// Решение задачи №3(*)
+// подготовленный массив
+arrayOfNumbers
+func calculateSumEvenOddValues(from array: [Int?]) -> (Int, Int) {
+    var arrayOfNumbersInt = [Int]()
+    for i in array {
+            if let value = i {
+                arrayOfNumbersInt.append(value)
+            }
+    }
+    var arrayNoDublicate = [Int]()
+    for i in arrayOfNumbersInt {
+        if !arrayNoDublicate.contains(i) {
+            arrayNoDublicate.append(i)
+        }
+    }
+    var resultSumEven = 0
+    var resultSumOdd = 0
+    for value in arrayNoDublicate {
+        if value % 2 == 0 {
+            resultSumEven += value
+        } else {
+            resultSumOdd += value
+        }
+    }
+  return (resultSumEven,resultSumOdd)
+
+}
+
+// проверка решения Задача №3
+calculateSumEvenOddValues(from: arrayOfNumbers)
+
+
